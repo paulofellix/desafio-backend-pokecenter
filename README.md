@@ -6,7 +6,7 @@
 
 **Back-end:** Node, Fastify, gRPC
 
-### Requisitos
+## Requisitos
 
 - Docker + Docker Compose Plugin. https://docs.docker.com/engine/install/
 - Node 18
@@ -34,6 +34,7 @@ Instale as dependências
 Subindo o banco de dados
 
 ```bash
+  chmod +x ./database/init.sh
   yarn boostrap
 ```
 
