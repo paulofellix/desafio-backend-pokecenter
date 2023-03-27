@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+service Users {
+  rpc GetUser (GetUserRequest) returns (GetUserResponse) {}
+  rpc CreateUser (CreateUserRequest) returns (google.protobuf.Empty) {}
+}
+
+message GetUserRequest {
+  int32 id = 1;
+}
+
+message GetUserResponse {
+  int32 id = 1;
+  string name = 2;
+  string phone = 3;
+  float balance = 4;
+}
+
+message CreateUserRequest {
+  int32 id = 1;
+  string name = 2;
+  string phone = 3;
+}

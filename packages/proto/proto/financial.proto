@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+service Financial {
+  rpc balance (BalanceRequest) returns (BalanceResponse) {}
+  rpc transaction(TransactionRequest) returns (google.protobuf.Empty) {}
+}
+
+message Empty {}
+
+message BalanceRequest {
+  int32 client_id = 1;
+}
+
+message BalanceResponse {
+  float balance = 1;
+}
+
+enum TransactionType {
+  DEBIT = 0;
+  CREDIT = 1;
+}
+
+message TransactionRequest {
+  int32 client_id = 1;
+  float amount = 2;
+  TransactionType type = 3;
+}

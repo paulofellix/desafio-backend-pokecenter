@@ -1,0 +1,61 @@
+Arguments: 
+  /home/paulo/.volta/tools/image/node/18.14.2/bin/node /home/paulo/.volta/tools/image/yarn/1.22.19/bin/yarn.js install --ignore-scripts
+
+PATH: 
+  /home/paulo/Desenvolvimento/desafio-pokecenter/packages/ms-users/node_modules/.bin:/home/paulo/Desenvolvimento/desafio-pokecenter/packages/ms-users/node_modules/.bin:/home/paulo/Desenvolvimento/desafio-pokecenter/packages/node_modules/.bin:/home/paulo/Desenvolvimento/desafio-pokecenter/node_modules/.bin:/home/paulo/Desenvolvimento/node_modules/.bin:/home/paulo/node_modules/.bin:/home/node_modules/.bin:/node_modules/.bin:/home/paulo/.volta/tools/image/npm/9.5.1/node_modules/@npmcli/run-script/lib/node-gyp-bin:/home/paulo/.volta/tools/image/npm/9.5.1/bin:/home/paulo/.volta/tools/image/yarn/1.22.19/bin:/home/paulo/.volta/tools/image/node/18.14.2/bin:/home/paulo/.volta/bin:/home/paulo/.fly/bin:/opt/flutter/bin:/home/paulo/.yarn/bin:/home/paulo/.config/yarn/global/node_modules/.bin:/home/paulo/.volta/bin:/home/paulo/.fly/bin:/opt/flutter/bin:/home/paulo/.yarn/bin:/home/paulo/.config/yarn/global/node_modules/.bin:/home/paulo/.volta/bin:/home/paulo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/paulo/.dotnet/tools:/home/paulo/.local/share/JetBrains/Toolbox/scripts:/home/paulo/.fzf/bin:/opt/oracle/instantclient_19_15:/usr/local/go/bin:/opt/oracle/instantclient_19_15:/usr/local/go/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.14.2
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@pokecenter%2fproto: Not found
+      at params.callback [as _callback] (/home/paulo/.volta/tools/image/yarn/1.22.19/lib/cli.js:66145:18)
+      at self.callback (/home/paulo/.volta/tools/image/yarn/1.22.19/lib/cli.js:140890:22)
+      at Request.emit (node:events:513:28)
+      at Request.<anonymous> (/home/paulo/.volta/tools/image/yarn/1.22.19/lib/cli.js:141862:10)
+      at Request.emit (node:events:513:28)
+      at IncomingMessage.<anonymous> (/home/paulo/.volta/tools/image/yarn/1.22.19/lib/cli.js:141784:12)
+      at Object.onceWrapper (node:events:627:28)
+      at IncomingMessage.emit (node:events:525:35)
+      at endReadableNT (node:internal/streams/readable:1359:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+
+npm manifest: 
+  {
+    "name": "ms-users",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "dependencies": {
+      "@pokecenter/proto": "^1.0.0"
+    },
+    "devDependencies": {
+      "@types/node": "^18.15.9",
+      "gts": "^3.1.1",
+      "tsup": "^6.7.0",
+      "tsx": "^3.12.6",
+      "typescript": "^5.0.2"
+    },
+    "scripts": {
+      "lint": "gts lint",
+      "clean": "gts clean",
+      "compile": "tsc",
+      "fix": "gts fix",
+      "dev": "tsx --watch src/index.ts",
+      "prepare": "npm run compile",
+      "pretest": "npm run compile",
+      "posttest": "npm run lint"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
