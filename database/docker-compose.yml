@@ -1,4 +1,4 @@
-version: "3.8"
+version: '3.8'
 services:
   db:
     container_name: postgres
@@ -9,20 +9,10 @@ services:
       POSTGRES_PASSWORD: root
       POSTGRES_DB: pokecenter
     ports:
-      - "5432:5432"
+      - '5432:5432'
     volumes:
       - pg_data:/var/lib/postgresql/data/
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
 
-  pgadmin:
-    container_name: pgadmin-pg
-    image: dpage/pgadmin4
-    restart: unless-stopped
-    environment:
-      PGADMIN_DEFAULT_EMAIL: root@root.com
-      PGADMIN_DEFAULT_PASSWORD: root
-    ports:
-      - "5050:80"
-
 volumes:
- pg_data:
+  pg_data:
