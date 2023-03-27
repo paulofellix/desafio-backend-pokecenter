@@ -1,0 +1,19 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "bootstrap": "lerna bootstrap && lerna link && ./database/init.sh",
+    "build": "lerna run build",
+    "start": "lerna run start",
+    "test": "lerna run test",
+    "lerna": "lerna",
+    "build-proto": "lerna run build-proto",
+    "dev": "lerna run dev"
+  },
+  "devDependencies": {
+    "lerna": "^6.6.1"
+  }
+}
