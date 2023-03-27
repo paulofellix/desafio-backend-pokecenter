@@ -35,7 +35,7 @@ Subindo o banco de dados
 
 ```bash
   chmod +x ./database/init.sh
-  yarn boostrap
+  yarn bootstrap
 ```
 
 Inicie o servidor
